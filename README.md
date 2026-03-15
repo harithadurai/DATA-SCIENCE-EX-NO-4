@@ -43,16 +43,18 @@ import numpy as np
 
 df=pd.read_csv("D:Bmi.csv")
 
-df
 
 <img width="486" height="626" alt="image" src="https://github.com/user-attachments/assets/2a89576c-ffe5-42a8-acc2-6e1b7a5341b9" />
 
 df.dropna() 
+
+
 <img width="456" height="636" alt="image" src="https://github.com/user-attachments/assets/e1ae0ff3-1747-4319-aa2f-b30f58a081f3" />
 
 max_vals=np.max(np.abs(df[['Height','Weight']]))
 
 max_vals
+
 
 <img width="960" height="53" alt="image" src="https://github.com/user-attachments/assets/5fcb323b-782d-4a10-bbfd-b9fbe59930a9" />
 
@@ -63,6 +65,7 @@ scaler=MinMaxScaler()
 df[['Height','Weight']]=scaler.fit_transform(df[['Height','Weight']])
 
 df.head(10)
+
 
 <img width="456" height="556" alt="image" src="https://github.com/user-attachments/assets/8b1ce7f3-fcfd-47cb-bb70-35626e0e6314" />
 
@@ -76,7 +79,7 @@ df4=pd.read_csv("bmi.csv")
 
 df5=pd.read_csv("bmi.csv")
 
-df1
+
 <img width="506" height="644" alt="image" src="https://github.com/user-attachments/assets/42e13ce1-1dd4-4cc7-98f9-8381877006d8" />
 
 from sklearn.preprocessing import StandardScaler
@@ -87,6 +90,7 @@ df1[['Height','Weight']]=sc.fit_transform(df1[['Height','Weight']])
 
 df.head(10)
 
+
 <img width="464" height="543" alt="image" src="https://github.com/user-attachments/assets/23dbe22e-e4e1-4933-a606-406dc696a14b" />
 
 from sklearn.preprocessing import Normalizer
@@ -95,7 +99,7 @@ scaler=Normalizer()
 
 df2[['Height','Weight']]=scaler.fit_transform(df2[['Height','Weight']])
 
-df2
+
 
 <img width="492" height="636" alt="image" src="https://github.com/user-attachments/assets/013cacc8-f4c6-440b-9be3-ba24a7925eb1" />
 
@@ -105,7 +109,7 @@ max1=MaxAbsScaler()
 
 df3[['Height','Weight']]=max1.fit_transform(df3[['Height','Weight']])
 
-df3
+
 
 <img width="511" height="642" alt="image" src="https://github.com/user-attachments/assets/1df2e449-ccbf-4199-921c-387fa32c3ba2" />
 
@@ -115,7 +119,8 @@ roub=RobustScaler()
 
 df4[['Height','Weight']]=roub.fit_transform(df4[['Height','Weight']])
 
-df4
+
+
 <img width="498" height="627" alt="image" src="https://github.com/user-attachments/assets/e8e63d92-3534-414e-873d-46394e7fe4aa" />
 
 from sklearn.feature_selection import SelectKBest,f_regression,mutual_info_classif
@@ -124,13 +129,14 @@ from sklearn.feature_selection import chi2
 
 data=pd.read_csv("income(1) (1).csv")
 
-data
+
 
 <img width="996" height="290" alt="image" src="https://github.com/user-attachments/assets/d49fc1bb-c872-404f-8300-42862094bc3d" />
 
 data1=pd.read_csv('/content/titanic_dataset (1).csv')
 
-data1
+
+
 <img width="868" height="316" alt="image" src="https://github.com/user-attachments/assets/b58c250f-cbde-4b26-96bc-45501af9b64b" />
 
 data1=data1.dropna()
@@ -151,7 +157,8 @@ data1['Cabin']=data1['Cabin'].cat.codes
 
 data1['Embarked']=data1['Embarked'].cat.codes
 
-data1
+
+
 <img width="886" height="329" alt="image" src="https://github.com/user-attachments/assets/199bec3f-45b6-41af-a5bf-4707259a8501" />
 
 k=5
@@ -176,6 +183,8 @@ print("Selected Features:")
 
 print(selected_features)
 
+
+
 <img width="886" height="56" alt="Screenshot 2025-10-17 230709" src="https://github.com/user-attachments/assets/1b98a157-d80c-49ae-bf97-9f7892792ddd" />
 
  from sklearn.feature_selection import SelectKBest,f_regression
@@ -194,6 +203,8 @@ print(selected_features)
  
  print(selected_features)
 
+ 
+
  <img width="879" height="64" alt="image" src="https://github.com/user-attachments/assets/682858ed-e31a-4241-b848-3056608b6b8c" />
 
  from sklearn.feature_selection import SelectKBest,mutual_info_classif
@@ -211,6 +222,8 @@ print(selected_features)
  print("Selected Features:")
  
  print(selected_features)
+
+
 
  <img width="882" height="69" alt="image" src="https://github.com/user-attachments/assets/c982fe0c-9b1a-41fa-9384-bc116ab86d2b" />
 
@@ -232,6 +245,8 @@ selected_features=x.columns[sfm.get_support()]
  
  print(selected_features)
 
+ 
+
 <img width="850" height="118" alt="image" src="https://github.com/user-attachments/assets/20e5b593-9c82-4221-98c7-c8d7199f9ccb" />
 
  from sklearn.ensemble import RandomForestClassifier
@@ -247,6 +262,8 @@ selected_features=x.columns[sfm.get_support()]
  print("Selected Features:")
  
  print(selected_features)
+
+ 
 
 
  <img width="810" height="65" alt="image" src="https://github.com/user-attachments/assets/3c72acd5-ab13-4bbd-bfae-fafb6c855dde" />
@@ -268,5 +285,6 @@ selected_features=x.columns[sfm.get_support()]
  <img width="458" height="76" alt="image" src="https://github.com/user-attachments/assets/4aabcc7f-764e-474a-875e-5247492e5575" />
 
 # RESULT:
+
 Thus the given data and perform Feature Scaling and Feature Selection process and save the
 data to a file.
